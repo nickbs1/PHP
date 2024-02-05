@@ -21,15 +21,14 @@ $dados=json_decode(file_get_contents($url),true);
 $cotação=$dados["value"][0]["cotacaoCompra"];
 $dia=$dados["value"][0] ["dataHoraCotacao"];
 
-echo"cotação do dolar hoje $cotação <br> dia $dia";
 
 
 
 
-
-$real=$_REQUEST["din"];
+$real=$_GET["din"];
 $dolar=$real / $cotação;
 $padrão=numfmt_create("pt_BR",NumberFormatter::CURRENCY);
+
 echo"seus " . numfmt_format_currency($padrão,$real,"BRL") 
 . "<br>equivale " . numfmt_format_currency($padrão,$dolar,"USD");
 

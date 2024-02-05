@@ -9,9 +9,29 @@
 <body>
  <main>
 <form action="moedasbd.php" method="get">
+<!--
+ form=formulario em html.
+ action=lugar pra onde o formulario sera enviado
+ method=como a informação sera enviada nesse caso o get que deixa a informçao na url.   
+-->
 <label for="din">Dinheiro</label>
+<!--
+ cria um rotulo com o nome de dinheiro   
+-->
 <input type="number" name="din" id="din" step="0.0l" placeholder="Digite seu dinheiro">
+<!--
+input= é um campo de entrada de dados.
+type="number"=comunica que o tipo e numerico e so aceitara valores numericos.
+name="din":o nome desta entrada de dados é din
+id=identificação unica
+step="0.001":neste caso aceita tres valores depois da virgula.
+placeholder=diz o que se tem que fazer no campo.  
+-->
 <input type="submit" value="Converter">
+<!--
+ type="submit":é um botão de envio de formulario.
+ value="converter":o nome do botão neste caso o nome do botã e converter.   
+-->
 </form>
 
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="estilo1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecessor</title>
+</head>
+<body>
+ <main>
+<form action="sucessor.php" method="get">
+<!--
+ 1-<form>: Esta tag HTML é usada para criar um formulário na página da web. Os formulários são usados para coletar dados do usuário, como informações de entrada ou seleção.
+ 2-action="sucessor.php": O atributo action especifica para onde os dados do formulário serão enviados quando o formulário for enviado. Neste caso, os dados serão enviados para um arquivo chamado "sucessor.php". 
+ 3-method="get": O atributo method especifica o método HTTP que será usado para enviar os dados do formulário. No caso de "get", os dados do formulário serão anexados à URL como parâmetros de consulta. Isso significa que os dados do formulário serão visíveis na barra de endereços do navegador.      
+ -->
+<label for="numero">Digite o numero</label>
+<!--
+ 1-<label>: Esta é uma tag HTML usada para criar um rótulo associado a um elemento de formulário.
+ 2-for="numero": O atributo for é usado para associar o rótulo a um elemento de formulário específico. Neste caso, o valor "numero" corresponde ao atributo id de um campo de entrada, indicando que este rótulo está associado ao campo de entrada com o id "numero".
+ 3-Digite o numero: Este é o texto que será exibido como rótulo.       
+-->
+<input type="number" name="numero" id="numero" placeholder="digite o numero">
+<!--
+ 1-type="number": O atributo type especifica o tipo de entrada que o campo deve aceitar. Neste caso, é definido como "number", indicando que o campo deve aceitar apenas valores numéricos.
+ 2-name="numero": O atributo name é utilizado para dar um nome ao campo. Quando o formulário é enviado, os dados do campo são enviados com o nome especificado. Neste caso, o campo é chamado "numero".
+ 3-id="numero": O atributo id fornece uma identificação única para o campo de entrada. Este identificador pode ser usado em conjunto com um rótulo associado (como o <label for="numero">) para melhorar a acessibilidade e a usabilidade.
+4-placeholder="digite o numero": O atributo placeholder fornece um texto de exemplo que é exibido no campo de entrada antes de o usuário digitar qualquer coisa. Ele serve como uma dica para indicar ao usuário o tipo de informação que se espera no campo. Neste caso, está indicando ao usuário que deve digitar um número.   
+-->
+<input type="submit" value="Gerar">
+<!--
+ 1-type="submit": O atributo type especifica o tipo de entrada que o campo deve representar. Neste caso, é definido como "submit", indicando que este é um botão de envio em um formulário. Quando este botão é clicado, o formulário associado será submetido (enviado).
+ 2-value="Gerar": O atributo value define o texto que será exibido no botão de envio. Neste exemplo, o texto no botão será "Gerar".   
+-->
+</form>
+
+<button onclick="javascript:document.location.reload()">zerar valores</button>
+<!--
+<button onclick="javascript:document.location.reload()"></button>
+ultilizado para recarregar a pagina.
+O código  é um botão HTML com um atributo onclick que contém uma expressão JavaScript.
+    1-<button>: Este é um elemento HTML que cria um botão na página.
+    2-onclick="javascript:document.location.reload()": Este é um atributo de evento chamado onclick, que é acionado quando o botão é clicado. A expressão dentro das aspas duplas é um código JavaScript que será executado quando o evento ocorrer.
+    3-javascript: Esta parte é um identificador de esquema que indica que o código JavaScript seguirá.
+    4-document.location.reload(): Esta é a expressão JavaScript real. Ela chama o método reload() do objeto location do documento, que recarrega a página. Portanto, quando o botão é clicado, a página atual será recarregada.
+    5-zerar valores: Este é o texto que será exibido no botão. Neste caso, o botão será rotulado como "zerar valores".        
+-->
+
+
+
+    
+ </main>   
+    
+</body>
+</html>

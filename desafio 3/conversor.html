@@ -9,9 +9,35 @@
 <body>
  <main>
 <form action="moedas.php" method="get">
+<!--
+Explicado no desafio 1
+resumo
+1-form= formulario em html.
+2-action=vai chamar o arquivo em php chamado moedas.php
+3-method=Neste caso chamará o metodo get que ficara o dados anexados na url.
+-->
 <label for="din">Dinheiro</label>
+<!--
+Explicado no desafio 1
+resumo
+cria um rotulo com o nome de Dinheiro
+-->
 <input type="number" name="din" id="din" step="0.0l" placeholder="Digite seu dinheiro">
+<!--
+Explicado no desafio 1
+resumo
+type="number":so aceitara numeros.
+name="din":é o identificador.
+id="din":ele é um identificador
+step="0.01"=ele aceita neste caso valores com ate duas casas decimais.
+placeholder=ele é um texto que fica na parte para se digitar ele diz o que tem que ser digitado no caso digite seu dinheiro.
+-->
 <input type="submit" value="Converter">
+<!--
+Explicado no desafio 1 
+resumo   
+Nesta parte o <input type="submit" value="Converter"> ele cria um botão chamdo converter que quando clicado envia os dados no caso enviara para moedas.php. 
+-->
 </form>
 
 

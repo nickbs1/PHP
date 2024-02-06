@@ -10,6 +10,8 @@
 <main>
 
 <?php 
+date_default_timezone_set("America/Fortaleza");
+echo"data de hoje:" . date("d/m/Y") . " <br>Horario:" . date("g:i:s");
 $num=$_GET["numero"];
 /*
 1-O trecho $num = $_GET["numero"]; é uma linha de código em PHP que está sendo usada para obter dados de uma solicitação HTTP usando o método GET. 
@@ -26,7 +28,7 @@ $sucessor=$num+1;
 $sucessor = $num + 1: Esta linha calcula o sucessor (número seguinte) do valor contido na variável $num. Adiciona 1 ao valor do $num e armazena o resultado na variável $sucessor.
 */
 
-echo"O numero digitado: $num <br> O antecessor deste numero: $antecessor <br> 
+echo"<br> O numero digitado: $num <br> O antecessor deste numero: $antecessor <br> 
 O sucessor deste numero: $sucessor ";
 /*
 echo para imprimir uma mensagem na tela, exibindo o número digitado, seu antecessor e sucessor.<br> é usado para adicionar quebras de linha HTML.

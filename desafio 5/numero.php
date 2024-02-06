@@ -9,6 +9,8 @@
 <body>
   <main>
 <?php 
+date_default_timezone_set("America/Fortaleza");
+echo"data de hoje:" . date("d/m/Y") . "<br> horario: " . date("g:i:s") . "<br>";
 $num=$_POST["numero"];
 $inteira=(int) $num;
 $fracionada=$num-$inteira;

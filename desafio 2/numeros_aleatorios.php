@@ -9,6 +9,9 @@
 <body>
   <main>
 <?php 
+date_default_timezone_set("America/Fortaleza");
+echo"data de hoje:" . date("d/m/Y") . "<br> horario:" . date("g:i:s");
+
 $min=0;
 /* 
 $min=0: declarei uma variavel chamada $min com o valor 0.
@@ -23,7 +26,7 @@ $num=mt_rand($min,$max);
 2-$min e $max: São as variáveis que representam os limites inferior e superior do intervalo no qual você deseja gerar o número aleatório.Neste caso vai gerar valores entre 0 até 105.
 3-$num: Esta variável armazenará o número inteiro aleatório gerado pela função mt_rand dentro do intervalo definido pelos valores de $min e $max.
 */
-echo"<h1>Gerador de numero entre 0 e 105.</h1>";
+echo"<br><h1>Gerador de numero entre 0 e 105.</h1>";
 echo"<br> $num";
 /*
 1-vai imprimir na tela Gerador de numero entre 0 e 105.

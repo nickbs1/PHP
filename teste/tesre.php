@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <link rel="stylesheet" href="estilo1.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Exemplo de formulário em PHP</title>
 </head>
 <body>
-    <main>
-        <?php 
-date_default_timezone_set("America/Fortaleza");
 
-echo"o dia de hoje: " . date("d/m/Y") . "<br>O horario:" . date("g:i:s");
+<h2>Exemplo de formulário em PHP</h2>
 
-//phpinfo();
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+  Nome: <input type="text" name="nome">
+  <input type="submit">
+</form>
 
-
-
+<?php
+// Verifica se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Processa os dados do formulário
+    $nome = $_POST['nome'];
+    echo "Olá, $nome!";
+}
 ?>
-</main>
-    
+
 </body>
 </html>

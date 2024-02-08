@@ -1,25 +1,29 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Exemplo de formulário em PHP</title>
+    <link rel="stylesheet" href="estilo1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
 </head>
 <body>
-
-<h2>Exemplo de formulário em PHP</h2>
-
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  Nome: <input type="text" name="nome">
-  <input type="submit">
-</form>
-
-<?php
-// Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Processa os dados do formulário
-    $nome = $_POST['nome'];
-    echo "Olá, $nome!";
-}
-?>
-
+<main>
+ <?php 
+$cotaçao=4.95;
+$real=$_POST["din"] ?? 1;
+$dolar=$real/$cotaçao;
+$padrao=numfmt_create("pt_BR",NumberFormatter::CURRENCY);
+echo"Dinheiro:" . numfmt_format_currency($padrao,$real,"BRL") . "<br> Dolar " .numfmt_format_currency($padrao,$dolar,"USD"); 
+ ?>   
+</main>    
+ 
+<main>
+  <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+<label for="din">Valor</label>
+<input type="number" name="din" id="din" step="0.001" placeholder="Digite o valor">
+<input type="submit" value="Calcular">
+</form>     
+</main>   
 </body>
 </html>

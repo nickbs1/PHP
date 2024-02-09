@@ -1,29 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="estilo1.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+  <link rel="stylesheet" href="estilo1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>numeros</title>
 </head>
 <body>
-<main>
- <?php 
+  <main>
+<?php 
 $cotaçao=4.95;
-$real=$_POST["din"] ?? 1;
+$real=$_POST["din"] ?? 0;
 $dolar=$real/$cotaçao;
 $padrao=numfmt_create("pt_BR",NumberFormatter::CURRENCY);
-echo"Dinheiro:" . numfmt_format_currency($padrao,$real,"BRL") . "<br> Dolar " .numfmt_format_currency($padrao,$dolar,"USD"); 
- ?>   
-</main>    
- 
+echo"Dinheiro:" . numfmt_format_currency($padrao,$real,"BRL") . "Dolar:" . numfmt_format_currency($padrao,$dolar,"USD");
+?>
+</main>
+
 <main>
-  <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 <label for="din">Valor</label>
 <input type="number" name="din" id="din" step="0.001" placeholder="Digite o valor">
 <input type="submit" value="Calcular">
-</form>     
-</main>   
+</form>
+</main>
 </body>
 </html>

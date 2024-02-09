@@ -7,30 +7,23 @@
     <title>cotação</title>
 </head>
 <body>
-    <main>
-<?php 
-$cotaçao=4.95;
-$real=$_POST["numero"] ?? 0;
-$dolar=$real/$cotaçao;
-$padrao=numfmt_create("pt_BR",NumberFormatter::CURRENCY);
-echo"Dinheiro:" . numfmt_format_currency($padrao,$real,"BRL") . "<br> Dolar:" . numfmt_format_currency($padrao,$dolar,"USD");
-/* 
-$padrao2=numfmt_create("pt_BR",NumberFormatter::CURRENCY);
-echo"dinheiro:" . numfmt_format_currency($padrao,$real,"BRL") . "Dolar:" . numfmt_format_currency($padrao,$dolar,"USD");
-
-*/
-?>
+<main> 
+ <?php 
+ $cotaçao=4.95;
+ $real=$_POST["din"] ?? 0;
+ $dolar=$real/$cotaçao;
+ $padrao=numfmt_create("pt_BR",NumberFormatter::CURRENCY);
+ echo"Dinheiro: " . numfmt_format_currency($padrao,$real,"BRL") . "Dolar: " . numfmt_format_currency($padrao,$dolar,"USD");
+ ?>   
 </main>
+
 
 <main>
-<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-<label for="numero">Numero</label>
-<input type="number" name="numero" id="numero" step="0.001" placeholder="digite o valor">
+<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+<label for="din">Valor</label>
+<input type="number" name="din" id="din" step="0.001" placeholder="Digite o valor">
 <input type="submit" value="Calcular">
-
-</form>    
-</main>
-
-    
+</form>
+</main>  
 </body>
 </html>

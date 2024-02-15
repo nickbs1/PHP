@@ -12,7 +12,7 @@
             <?php 
     $inicio=date("d/m/Y",strtotime("-7 days"));
     $fim=date("d/m/Y");
-    $url='https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''.$inicio.'\'&@dataFinalCotacao=\''.$fim.'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+    $url='https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\'02-08-2024\'&@dataFinalCotacao=\'02-15-2024\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
     $dados=json_decode(file_get_contents($url),true);
     //var_dump($dados);
     $cotaçao=$dados["value"][0]["cotacaoCompra"];

@@ -9,8 +9,8 @@
 <body>
     <main>
         <?php 
-    $nome = $_GET['nome'];
-    $sobrenome = $_GET ['sobrenome'];
+    $nome = $_GET['nome'] ?? " ";
+    $sobrenome = $_GET ['sobrenome'] ?? " ";
     echo"seu nome completo é $nome $sobrenome.";
     ?>
     </main>

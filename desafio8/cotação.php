@@ -13,7 +13,7 @@
  $real=$_POST["din"] ?? 0;
  $dolar=$real/$cotaçao;
  $padrao=numfmt_create("pt_BR",NumberFormatter::CURRENCY);
- echo"Dinheiro: " . numfmt_format_currency($padrao,$real,"BRL") . "Dolar: " . numfmt_format_currency($padrao,$dolar,"USD");
+ echo"Dinheiro: " . numfmt_format_currency($padrao,$real,"BRL") . "<br> Dolar: " . numfmt_format_currency($padrao,$dolar,"USD");
  ?>   
 </main>
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio12</title>
+</head>
+<body>
+ <form action="rejp.php" method="get">
+<label for="preço">Preço do produto</label>
+<input type="number" name="preço" id="preço" placeholder="digite o preço do produto">
+<br><br><br>
+<label for="reajuste">Reajuste(<span id="p">?</span>%)</label>
+<input type="range" name="reajuste" id="reajuste" min="0" max="100" step="1" oninput="mudavalor()">
+<input type="submit" value="Enviar">
+ </form>   
+ <script>
+    mudavalor()
+function mudavalor(){
+ p.innerText = reajuste.value;
+
+}
+
+ </script>
+</body>
+</html>
